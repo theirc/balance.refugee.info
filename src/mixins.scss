@@ -1,0 +1,29 @@
+/* colors from Refugee Info Brand Guidelines */
+
+$color-green: #00B74D;
+$color-green-2: #31C36E;
+$color-green-3: #61CF8F;
+$color-green-4: #92DBB1;
+$color-green-5: #C2E7D2;
+$color-green-6: #E7F0EB;
+
+$color-black: #212121;
+$color-black-2: #4B4B4B;
+$color-black-3: #757575;
+$color-black-4: #9F9F9F;
+$color-black-5: #C9C9C9;
+$color-black-6: #E8E8E8;
+
+$color-white: #FFFFFF;
+
+/* bootstrap responsive layout breakpoints */
+
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+/* height responsive layout breakpoint for very small devices */
+$screen-height-very-low: 480px;

@@ -1,0 +1,84 @@
+/* Only global styles here */
+@import "mixins";
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-green;
+  color: $color-white;
+  font-family: 'Montserrat', sans-serif;
+  @media (min-width: $screen-sm-min) {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.multiple {
+    justify-content: space-around;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    .rounded-button {
+      margin: 0 5px;
+    }
+  }
+}
+
+.rounded-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 24px;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: $color-white;
+  color: $color-green;
+  text-decoration: none;
+  &:hover {
+    background-color: $color-black-6;
+  }
+  &.smaller-text {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+  @media (max-height: $screen-height-very-low) {
+    height: 40px;
+    font-size: 20px;
+    width: 180px;
+    &.smaller-text {
+      font-size: 16px;
+      padding: 0 12px;
+    }
+  }
+}
+
+.loading-screen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
