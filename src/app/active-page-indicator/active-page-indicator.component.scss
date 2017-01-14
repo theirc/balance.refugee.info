@@ -1,8 +1,25 @@
+@import "../../mixins";
+
+$indicator-size: 12px;
+
 :host {
   width: 100%;
   height: 30px;
   margin-bottom: 15px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+div.indicator {
+  height: $indicator-size;
+  width: $indicator-size;
+  border-radius: $indicator-size;
+  display: block;
+  margin: 0 5px;
+  border: 2px solid $color-white;
+  &.full {
+    background-color: $color-white;
+  }
 }
