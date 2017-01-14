@@ -14,11 +14,15 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 40px;
+  @media (max-height: $screen-height-very-low) {
+    display: block;
+  }
 }
 
 form {
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   width: 100%;
+  max-width: $screen-height-very-low;
   label {
     display: block;
     font-size: 16px;

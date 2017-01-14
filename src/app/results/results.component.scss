@@ -1,7 +1,10 @@
+@import "../../mixins";
+
 :host {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .content {
@@ -14,5 +17,8 @@
     margin: 0;
     padding: 0 30px;
     text-align: center;
+  }
+  @media (max-height: $screen-height-very-low) {
+    display: block;
   }
 }

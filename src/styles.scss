@@ -35,9 +35,10 @@ body {
   align-items: center;
   justify-content: center;
   &.multiple {
+    margin: 0 auto 10px auto;
+    max-width: $screen-height-very-low;
     justify-content: space-around;
     padding: 0 10px;
-    margin-bottom: 10px;
     .rounded-button {
       margin: 0 5px;
     }
