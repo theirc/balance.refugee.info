@@ -13,9 +13,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0 40px;
   p {
-    margin: 0;
-    padding: 0 30px;
     text-align: center;
   }
   @media (max-height: $screen-height-very-low) {
