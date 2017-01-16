@@ -1,16 +1,17 @@
 <div class="content">
 
-    <div style="height: 150px; width: 100%; background-color: deepskyblue; padding: 10px; border-radius: 10px; max-width: 480px">
+    <div class="visa-container">
         <h2>VISA</h2>
-        <p>**** **** ****</p>
+        <p>**** ****</p>
+        <p>****</p>
     </div>
 
     <form>
         <label for="card">{{ 'INPUT.CARD_NO' | translate }}</label>
-        <input type="text" name="card" id="card" value="" />
+        <input type="text" name="card" id="card" value="" maxlength="14" />
 
         <label for="password">{{ 'INPUT.PIN' | translate }}</label>
-        <input type="password" name="password" id="password" value="" />
+        <input type="password" name="password" id="password" value="" maxlength="4" />
     </form>
 </div>
 
