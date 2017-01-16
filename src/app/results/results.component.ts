@@ -10,6 +10,8 @@ import {slideAnimation} from '../app.routes.animations';
 export class ResultsComponent implements OnInit {
     @HostBinding('@routeAnimation') routeAnimation = true;
 
+    balance: string = '55.31 $';
+
     constructor() {
     }
 

@@ -1,0 +1,25 @@
+{
+  "UPDATED_ON": "به روز شده در {{date}}",
+  "WELCOME": {
+    "HELP": "This tool will allow you to check your IRC Visa card balance for free.",
+    "NOTE_1": "Note: the information is updated on woking days only.",
+    "NOTE_2": "Please check the updated status below for the most recent update.",
+    "GET_STARTED": "Get Started"
+  },
+  "INPUT": {
+    "CARD_NO": "Enter card number (14 digits):",
+    "PIN": "Enter PIN code (4 digits):",
+    "CHECK_BALANCE": "Check Balance"
+  },
+  "RESULTS": {
+    "BALANCE": "Your remaining balance is:",
+    "NOTE_1": "Note: the information is updated on woking days only.",
+    "NOTE_2": "Please check the updated status below for the most recent update.",
+    "TO_START": "Back to start",
+    "TO_REFUGEE_INFO": "Back to Refugee.info"
+  },
+  "PAGE_NOT_FOUND": {
+    "NOT_FOUND": "Page not found.",
+    "GO_TO_MAIN_PAGE": "Go to Main Page"
+  }
+}

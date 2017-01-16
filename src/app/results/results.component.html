@@ -1,17 +1,17 @@
 <div class="help">
-    <h2 class="text-center">Your remaining balance is:</h2>
-    <h1 class="text-center">55.31 $</h1>
+    <h2 class="text-center">{{ 'RESULTS.BALANCE' | translate }}</h2>
+    <h1 class="text-center">{{ balance }}</h1>
 </div>
 
 <div class="content">
-    <p>Note: the information is updated on woking days only.</p>
-    <p>Please check the updated status below for the most recent update.</p>
+    <p>{{ 'RESULTS.NOTE_1' | translate }}</p>
+    <p>{{ 'RESULTS.NOTE_2' | translate }}</p>
 </div>
 
 <div class="footer">
     <active-page-indicator [elements]="3" [active]="3"></active-page-indicator>
     <div class="button-container multiple">
-        <a class="rounded-button smaller-text" routerLink="/language">Back to start</a>
-        <a class="rounded-button smaller-text" href="http://refugee.info">Back to Refugee.info</a>
+        <a class="rounded-button smaller-text" routerLink="/language">{{ 'RESULTS.TO_START' | translate }}</a>
+        <a class="rounded-button smaller-text" href="http://refugee.info">{{ 'RESULTS.TO_REFUGEE_INFO' | translate}}</a>
     </div>
 </div>

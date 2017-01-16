@@ -1,15 +1,15 @@
 <div class="help">
-    <p class="text-center">This tool will allow you to check your IRC Visa card balance for free.</p>
+    <p class="text-center">{{ 'WELCOME.HELP' | translate }}</p>
 </div>
 
 <div class="content">
-    <p>Note: the information is updated on woking days only.</p>
-    <p>Please check the updated status below for the most recent update.</p>
+    <p>{{ 'WELCOME.NOTE_1' | translate }}</p>
+    <p>{{ 'WELCOME.NOTE_2' | translate }}</p>
 </div>
 
 <div class="footer">
     <active-page-indicator [elements]="3" [active]="1"></active-page-indicator>
     <div class="button-container">
-        <a class="rounded-button" routerLink="/input">Get Started</a>
+        <a class="rounded-button" routerLink="/input">{{ 'WELCOME.GET_STARTED' | translate }}</a>
     </div>
 </div>
