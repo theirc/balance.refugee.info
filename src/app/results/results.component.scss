@@ -19,6 +19,7 @@
     margin: 5px 0;
   }
   @media (max-height: $screen-height-very-low) {
+    overflow: auto;
     display: block;
   }
 }

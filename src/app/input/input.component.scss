@@ -18,7 +18,7 @@
     margin: 0 20px;
   }
   @media (max-height: $screen-height-very-low + 80) {
-    // need some tweaking
+    overflow: auto;
     display: block;
   }
 }
