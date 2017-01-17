@@ -22,6 +22,9 @@
   text-align: center;
   color: $color-green-5;
   margin-top: 5px;
+  @media (max-height: $screen-height-very-low - 50) {
+    display: none;
+  }
 }
 
 .direction-container {

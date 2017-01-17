@@ -14,7 +14,11 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 40px;
-  @media (max-height: $screen-height-very-low) {
+  @media (max-width: 320px) {
+    margin: 0 20px;
+  }
+  @media (max-height: $screen-height-very-low + 80) {
+    // need some tweaking
     display: block;
   }
 }
@@ -33,9 +37,10 @@ form {
     font-size: 16px;
     padding: 8px 12px;
     border-radius: 12px;
-    border: none;
+    border: 2px solid $color-black-4;
     background-color: darken($color-black-6, 6%);
     color: $color-white;
+
   }
 }
 

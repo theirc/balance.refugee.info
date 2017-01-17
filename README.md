@@ -2,6 +2,15 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 
+## Install Angular CLI globally
+
+Run `npm install -g angular-cli`
+
+## JIT or AOT compilation
+
+This project is ready to use AOT compilation, which runs only once at build time. 
+[JIT vs AOT comparison](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html#!#aot-jit)
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
