@@ -13,9 +13,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 40px;
+  padding: 0 30px;
   @media (max-width: 320px) {
-    margin: 0 20px;
+    padding: 0 15px;
   }
   @media (max-height: $screen-height-very-low + 80) {
     overflow: auto;
@@ -57,7 +57,6 @@ form {
   background: -webkit-linear-gradient(top, #60caea 29%,#0075ce 100%);
   background: linear-gradient(to bottom, #60caea 29%,#0075ce 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60caea', endColorstr='#0075ce',GradientType=0 );
-
   h2 {
     border: 4px solid $color-white;
     border-radius: 5px;

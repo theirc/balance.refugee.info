@@ -7,9 +7,17 @@
   overflow: auto;
 }
 .help {
-  margin: 10px 30px;
+  padding: 5px 30px;
   p {
     font-size: 18px;
+  }
+  @media (max-height: $screen-height-very-low) {
+    margin: 0;
+    padding: 5px 10px;
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
   }
 }
 .content {
@@ -24,6 +32,7 @@
     text-align: center;
   }
   @media (max-height: $screen-height-very-low) {
+    padding-top: 15px;
     overflow: auto;
     display: block;
   }

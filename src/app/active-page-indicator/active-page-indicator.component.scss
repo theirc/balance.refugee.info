@@ -10,6 +10,9 @@ $indicator-size: 12px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @media (max-height: $screen-height-very-low) {
+    margin-bottom: 0;
+  }
 }
 
 div.indicator {

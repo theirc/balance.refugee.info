@@ -7,18 +7,39 @@
   overflow: auto;
 }
 
+.help {
+  padding: 0 10px;
+  @media (max-height: $screen-height-very-low) {
+    h1 {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+  }
+}
 .content {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 40px;
+  padding: 0 30px;
+  @media (max-height: $screen-height-very-low) {
+    padding: 0 15px;
+    p {
+      font-size: 14px;
+    }
+
+  }
   p {
     text-align: center;
     margin: 5px 0;
   }
   @media (max-height: $screen-height-very-low) {
+    padding-top: 15px;
     overflow: auto;
     display: block;
   }
