@@ -4,6 +4,11 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LanguageSelectionComponent } from './language-selection.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule, TranslateStaticLoader, TranslateLoader} from 'ng2-translate';
+import { getTranslateLoader } from '../app.module';
+import { HttpModule, Http} from '@angular/http';
+import { CookieService} from 'angular2-cookie/services/cookies.service';
 
 describe('LanguageSelectionComponent', () => {
   let component: LanguageSelectionComponent;
@@ -11,7 +16,15 @@ describe('LanguageSelectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LanguageSelectionComponent ]
+      declarations: [
+      LanguageSelectionComponent
+      ],
+            providers: [CookieService],
+            imports: [ RouterTestingModule, TranslateModule.forRoot({
+            provide: TranslateLoader,
+            useFactory: (getTranslateLoader),
+            deps: [Http]
+        }) ]
     })
     .compileComponents();
   }));
