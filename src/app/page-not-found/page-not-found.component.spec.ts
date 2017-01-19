@@ -2,6 +2,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { TranslateModule, TranslateStaticLoader, TranslateLoader} from 'ng2-translate';
+import { getTranslateLoader } from '../app.module';
+import { HttpModule, Http} from '@angular/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { PageNotFoundComponent } from './page-not-found.component';
 
@@ -11,7 +15,12 @@ describe('PageNotFoundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageNotFoundComponent ]
+      declarations: [ PageNotFoundComponent ],
+      imports: [ RouterTestingModule, TranslateModule.forRoot({
+            provide: TranslateLoader,
+            useFactory: (getTranslateLoader),
+            deps: [Http]
+        }) ]
     })
     .compileComponents();
   }));
