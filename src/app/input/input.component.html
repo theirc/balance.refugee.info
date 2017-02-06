@@ -1,17 +1,19 @@
 <div class="content">
 
-    <div class="visa-container">
-        <h2>VISA</h2>
-        <p>**** ****</p>
-        <p>****</p>
+    <div class="card-container">
+        <div class="row-container">
+            <span class="visa">VISA</span>
+            <img class="mastercard" src="/assets/mastercard.png">
+        </div>
+        <p>**** **** ***X XXXX</p>
     </div>
 
     <form>
         <label for="card">{{ 'INPUT.CARD_NO' | translate }}</label>
-        <input type="text" name="card" id="card" value="" maxlength="14" />
+        <input type="text" name="card" id="card" value="" maxlength="5" />
 
-        <label for="password">{{ 'INPUT.PIN' | translate }}</label>
-        <input type="password" name="password" id="password" value="" maxlength="4" />
+        <label for="phone_no">{{ 'INPUT.PIN' | translate }}</label>
+        <input type="password" name="phone_no" id="phone_no" value="" maxlength="10" />
     </form>
 </div>
 
