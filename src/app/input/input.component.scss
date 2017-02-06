@@ -44,7 +44,7 @@ form {
   }
 }
 
-.visa-container {
+.card-container {
   height: 150px;
   width: 100%;
   padding: 15px;
@@ -57,17 +57,29 @@ form {
   background: -webkit-linear-gradient(top, #60caea 29%,#0075ce 100%);
   background: linear-gradient(to bottom, #60caea 29%,#0075ce 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60caea', endColorstr='#0075ce',GradientType=0 );
-  h2 {
-    border: 4px solid $color-white;
+  .visa {
+    border: 6px solid $color-white;
     border-radius: 5px;
-    display: inline-block;
+    display: block;
     margin-top: 5px;
+    margin-right: 10px;
     padding: 7px;
     font-size: 22px;
+  }
+  .mastercard {
+    height: 53px;
+    margin-top: 5px
   }
   p {
     margin: 0;
     font-size: 20px;
     font-family: monospace;
+  }
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 15px;
   }
 }

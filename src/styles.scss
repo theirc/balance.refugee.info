@@ -55,17 +55,18 @@ body {
   text-align: center;
   border-radius: 25px;
   font-size: 24px;
-  width: 200px;
+  width: 280px;
   height: 50px;
   margin-bottom: 10px;
   background-color: $color-white;
   color: $color-green;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     background-color: $color-black-6;
   }
   &.smaller-text {
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 15px;
   }
   @media (max-height: $screen-height-very-low) {
