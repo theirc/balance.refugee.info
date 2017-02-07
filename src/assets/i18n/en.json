@@ -2,7 +2,7 @@
   "UPDATED_ON": "Updated on {{date}}",
   "WELCOME": {
     "HELP": "This tool will allow you to check your IRC ATM card balance for free.",
-    "NOTE_1": "Note: the information are updated on business days only.",
+    "NOTE_1": "Note: the information is updated on business days only.",
     "NOTE_2": "Please check the updated status below for the most recent update.",
     "GET_STARTED": "Press here to Start"
   },
