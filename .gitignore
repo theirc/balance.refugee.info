@@ -38,3 +38,23 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+# python, django
+*.sw[po]
+*.py[co]
+.idea
+.pydevproject
+*~
+*.db
+*.orig
+*.DS_Store
+.coverage
+*/settings/local.py
+public/static/
+public/media/
+secrets.sls*
+*.log
+node_modules
+local_settings.py
+venv
+db.sqlite3
