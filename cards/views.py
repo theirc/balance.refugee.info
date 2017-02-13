@@ -24,9 +24,9 @@ def get_status_code(card_status):
 class RetrieveBalanceView(APIView):
     def post(self, request):
         data = request.data
-        if data.get('card') and data.get('phone_no'):
+        if data.get('card_no') and data.get('phone_no'):
             try:
-                card = CardBalance.objects.get(card_no__endswith=data['card'][-5:], phone_no=data['phone_no'])
+                card = CardBalance.objects.get(card_no__endswith=data['card_no'][-5:], phone_no=data['phone_no'])
                 return Response({'balance': card.balance})
             except CardBalance.DoesNotExist:
                 raise NotFound
