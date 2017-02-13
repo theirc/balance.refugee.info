@@ -8,7 +8,7 @@ CARD_STATUSES = (
 
 
 class CardBalance(models.Model):
-    card_no = models.CharField(max_length=16, blank=True, null=True)
+    card_no = models.CharField(unique=True, max_length=16, blank=True, null=True)
     phone_no = models.CharField(max_length=10, blank=True, null=True)
     balance = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
     exp_date = models.DateField(blank=True, null=True)

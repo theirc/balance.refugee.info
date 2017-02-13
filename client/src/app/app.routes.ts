@@ -1,4 +1,4 @@
-import {Routes} from "@angular/router";
+import {Routes} from '@angular/router';
 
 import {LanguageSelectionComponent} from './language-selection/language-selection.component';
 import {WelcomeComponent} from './welcome/welcome.component';
