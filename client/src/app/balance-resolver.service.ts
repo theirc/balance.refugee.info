@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Resolve, Router, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
-import {Balance, BalanceService} from "./balance.service";
+import {Resolve, Router, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import {Balance, BalanceService} from './balance.service';
 
 @Injectable()
 export class BalanceResolverService implements Resolve<Balance> {
@@ -8,7 +8,7 @@ export class BalanceResolverService implements Resolve<Balance> {
     constructor(private balanceService: BalanceService, private router: Router) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<Balance> {
-        let id = route.params['id'];
+        const id = route.params['id'];
         return this.balanceService.getBalance(id).then(balance => {
             if (balance) {
                 return balance;
