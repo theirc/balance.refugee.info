@@ -9,14 +9,17 @@
   "INPUT": {
     "CARD_NO": "Enter your last 5 digits from the card",
     "PIN": "Enter your 10 digit Phone Number",
-    "CHECK_BALANCE": "Press to Check Balance"
+    "CHECK_BALANCE": "Press to Check Balance",
+    "VALIDATION_ERROR": "Phone and card number does not match."
   },
   "RESULTS": {
     "BALANCE": "Your remaining balance is:",
     "NOTE_1": "Note: European ATM Machines only give out EURO. The displayed amount is in USD $.",
     "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro.",
     "TO_START": "Back to start",
-    "TO_REFUGEE_INFO": "Go to Refugee.info"
+    "TO_REFUGEE_INFO": "Go to Refugee.info",
+    "TO_INPUT": "Back to Card Form",
+    "ERROR": "Seems that you came here from bad link. Click button below to go to Card Form."
   },
   "PAGE_NOT_FOUND": {
     "NOT_FOUND": "Page not found.",

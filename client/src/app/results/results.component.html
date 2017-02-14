@@ -3,9 +3,16 @@
     <h1 class="text-center">{{ balance }}</h1>
 </div>
 
-<div class="content">
+<div class="content" *ngIf="balance">
     <p>{{ 'RESULTS.NOTE_1' | translate }}</p>
     <p>{{ 'RESULTS.NOTE_2' | translate }}</p>
+</div>
+
+<div class="content" *ngIf="!balance">
+    <p>{{ 'RESULTS.ERROR' | translate }}</p>
+    <div class="button-container" style="margin-top: 30px">
+        <a class="rounded-button smaller-text" routerLink="/input">{{ 'RESULTS.TO_INPUT' | translate }}</a>
+    </div>
 </div>
 
 <div class="footer">

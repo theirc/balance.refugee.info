@@ -14,6 +14,7 @@ import {InputComponent} from './input/input.component';
 import {ResultsComponent} from './results/results.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ActivePageIndicatorComponent} from './active-page-indicator/active-page-indicator.component';
+import {BalanceService} from './balance.service';
 
 
 export function getTranslateLoader(http: Http) {
@@ -42,7 +43,7 @@ export function getTranslateLoader(http: Http) {
             deps: [Http]
         })
     ],
-    providers: [CookieService],
+    providers: [CookieService, BalanceService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
