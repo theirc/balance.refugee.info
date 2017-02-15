@@ -22,6 +22,7 @@ def get_status_code(card_status):
 
 
 class RetrieveBalanceView(APIView):
+
     def post(self, request):
         data = request.data
         if data.get('card_no') and data.get('phone_no'):
@@ -34,6 +35,7 @@ class RetrieveBalanceView(APIView):
 
 
 class ImportSpreadsheetView(APIView):
+
     def get_spreadsheets(self):
         module_dir = os.path.dirname(__file__)
         balance_path = os.path.join(module_dir, '../cards-balance.xls')

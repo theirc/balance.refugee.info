@@ -40,7 +40,7 @@ form {
     border: 2px solid $color-black-4;
     background-color: darken($color-black-6, 6%);
     color: $color-white;
-
+    text-align: center;
   }
 }
 
@@ -83,4 +83,12 @@ form {
     flex: 1;
     margin-bottom: 15px;
   }
+}
+
+.error {
+  padding: 5px 10px;
+  color: $color-black;
+  border: 2px solid $color-black;
+  border-radius: 3px;
+  margin-top: 10px;
 }

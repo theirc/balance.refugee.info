@@ -1,5 +1,6 @@
 boxsdk==1.5.3
 celery==4.0.2
 django==1.10.5
+django-cors-headers==2.0.2
 djangorestframework==3.4.7
 xlrd==1.0.0

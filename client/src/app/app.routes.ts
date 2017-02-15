@@ -21,8 +21,7 @@ export const appRoutes: Routes = [
     },
     {
         path: 'results',
-        component: ResultsComponent,
-        data: {title: 'Heroes List'}
+        component: ResultsComponent
     },
     {
         path: '',
