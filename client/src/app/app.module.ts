@@ -21,6 +21,9 @@ export function getTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
 
+export function cookieServiceFactory() {
+    return new CookieService();
+}
 
 @NgModule({
     declarations: [
@@ -43,7 +46,10 @@ export function getTranslateLoader(http: Http) {
             deps: [Http]
         })
     ],
-    providers: [CookieService, BalanceService],
+    providers: [
+        {provide: CookieService, useFactory: cookieServiceFactory},
+        BalanceService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
