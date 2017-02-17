@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f!5)7mfi#vo^_nft5psustyvl#f4w)4q_7ns8)=e$dzg%f))gw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -116,6 +116,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CARD_BALANCE_FILE_URL = os.environ.get(
+    'CARD_BALANCE_FILE_URL',
+    'https://rescue.box.com/shared/static/koh4pt8gqv0xyjvfm9tpdr08lrdgcyef.xls'
+)
+CARD_PHONE_FILE_URL = os.environ.get(
+    'CARD_BALANCE_FILE_URL',
+    'https://rescue.box.com/shared/static/c7lp39hk9a2qf88wmb5b48eydasyy6qp.xlsx'
+)
 
 try:
     from .local_settings import *
