@@ -4,3 +4,4 @@ django-cors-headers==2.0.2
 djangorestframework==3.4.7
 xlrd==1.0.0
 gunicorn==19.6.0
+redis
