@@ -1,0 +1,14 @@
+{
+  "name": "buildpack-dummy",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "private": true,
+  "engines": {
+    "node": "6.2.2"
+  },
+  "scripts": {
+    "postinstall": "sh postdeploy.sh"
+  }
+}
+

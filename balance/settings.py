@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'client')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -22,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f!5)7mfi#vo^_nft5psustyvl#f4w)4q_7ns8)=e$dzg%f))gw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(';')
 
 # Application definition
 
@@ -67,6 +68,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 ]
 
 WSGI_APPLICATION = 'balance.wsgi.application'
@@ -114,8 +120,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/'
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(ANGULAR_APP_DIR, 'dist')
+]
+
+CELERY_RESULT_BACKEND = 'amqp'
+CELERY_BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672//')
 
 CARD_BALANCE_FILE_URL = os.environ.get(
     'CARD_BALANCE_FILE_URL',
