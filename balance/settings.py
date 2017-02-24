@@ -139,6 +139,14 @@ CARD_PHONE_FILE_URL = os.environ.get(
     'https://rescue.box.com/shared/static/c7lp39hk9a2qf88wmb5b48eydasyy6qp.xlsx'
 )
 
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.config()
+
+
 try:
     from .local_settings import *
 except ImportError:
