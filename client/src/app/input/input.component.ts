@@ -26,17 +26,16 @@ export class InputComponent implements OnInit {
     }
 
     submit() {
-        this.balanceService.getBalance(this.form)
-            .then(response => {
-                if (!response.ok) {
-                    this.validationError = true;
-                    this.form.phone_no = '';
-                } else {
-                    this.validationError = false;
-                    const balance = response.json().balance;
-                    this.balanceService.updateBalance(balance);
-                    this.router.navigate(['/results']);
-                }
+        this.balanceService.getBalance(this.form).then(response => {
+            if (!response.ok) {
+                this.validationError = true;
+                this.form.phone_no = '';
+            } else {
+                this.validationError = false;
+                const balance = response.json().balance;
+                this.balanceService.updateBalance(balance);
+                this.router.navigate(['/results']);
+            }
         }).catch(error => {
             this.validationError = true;
             this.form.phone_no = '';

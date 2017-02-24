@@ -1,5 +1,5 @@
 {
-  "UPDATED_ON": "Updated on {{date}}",
+  "UPDATED_ON": "Updated on",
   "WELCOME": {
     "HELP": "This tool will allow you to check your IRC ATM card balance for free.",
     "NOTE_1": "Note: the information is updated on business days only.",
