@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiPath: 'http://balance.refugee.info'
+    apiPath: 'http://balance.staging.rescueapp.org'
 };
