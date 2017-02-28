@@ -1,12 +1,14 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound, ValidationError
+from django.views.decorators.csrf import csrf_exempt
 
 from cards.models import CardBalance
 
 
-class RetrieveBalanceView(APIView):
 
+class RetrieveBalanceView(APIView):
+    @csrf_exempt
     def post(self, request):
         data = request.data
         if data.get('card_no') and data.get('phone_no'):
