@@ -1,28 +1,28 @@
 {
-  "UPDATED_ON": "Updated on",
+  "UPDATED_ON": "تم التحديث بتاريخ",
   "WELCOME": {
-    "HELP": "This tool will allow you to check your IRC ATM card balance for free.",
-    "NOTE_1": "Note: the information is updated on business days only.",
-    "NOTE_2": "Please check the updated status below for the most recent update.",
-    "GET_STARTED": "Press here to Start"
+    "HELP": "تستطيع بإستخدام هذه الأداة معرفة رصيدك مجاناً في بطاقة الصراف الآلي التي تحملها والمزودة من قبل لجنة الإنقاذ الدولية (IRC).",
+    "NOTE_1": "ملاحظة: يتم تحديث هذه المعلومات فقط خلال أيام العمل فقط.",
+    "NOTE_2": "ستجد في الأسفل تاريخ آخر تحديث.",
+    "GET_STARTED": "إضغط هنا حتى تبدأ"
   },
   "INPUT": {
-    "CARD_NO": "Enter your last 5 digits from the card",
-    "PIN": "Enter your 10 digit Phone Number",
-    "CHECK_BALANCE": "Press to Check Balance",
-    "VALIDATION_ERROR": "Phone and card number does not match."
+    "CARD_NO": "أدخل آخر خمسة أرقام من بطاقتك.",
+    "PIN": "أدخل رقم هاتفك والمكون من 10 خانات.",
+    "CHECK_BALANCE": "إضغط حتّى ترى رصيدك",
+    "VALIDATION_ERROR": "رقم الهاتف و/أو رقم البطاقة غير صحيح."
   },
   "RESULTS": {
-    "BALANCE": "Your remaining balance is:",
-    "NOTE_1": "Note: European ATM Machines only give out EURO. The displayed amount is in USD $.",
-    "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro.",
-    "TO_START": "Back to start",
-    "TO_REFUGEE_INFO": "Go to Refugee.info",
-    "TO_INPUT": "Back to Card Form",
-    "ERROR": "Seems that you came here from bad link. Click button below to go to Card Form."
+    "BALANCE": "رصيدك المتبقي:",
+    "NOTE_1": "ملاحظة: جميع أجهزة الصراف الآلي ستعطي المال باليورو حصراً داخل أوروبا. ولكن المبلغ الظاهر هو بالدولار USD $.",
+    "NOTE_2": "سيتم تحويل المال إلى يورو تبعاً لسعر الصرف الحالي وذلك عند سحب المال من الصراف الآلي. ",
+    "TO_START": "العودة إلى البداية",
+    "TO_REFUGEE_INFO": "إذهب إلى Refugee.info",
+    "TO_INPUT": "العودة إلى استمارة البطاقة (Card Form)",
+    "ERROR": "يبدو أنك وصلت إلى هنا بإستخدام رابط خاطئ. إضغط على الزر في الأسفل حتى تذهب إلى استمارة البطاقة  (Card Form)."
   },
   "PAGE_NOT_FOUND": {
-    "NOT_FOUND": "Page not found.",
-    "GO_TO_MAIN_PAGE": "Go to Main Page"
+    "NOT_FOUND": "صفحة غير موجودة.",
+    "GO_TO_MAIN_PAGE": "إذهب إلى الصفحة الرئيسية."
   }
 }
