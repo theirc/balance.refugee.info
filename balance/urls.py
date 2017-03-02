@@ -22,5 +22,8 @@ from django.views.generic import RedirectView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('cards.urls')),
-    url(r'^$', RedirectView.as_view(url='index.html', permanent=True), name='index')
+    url(r'^$', RedirectView.as_view(url='index.html', permanent=True), name='index'),
+
+    # Covering routes from client/src/app/app.routes.ts
+    url(r'^results|input|welcome|language$', RedirectView.as_view(url='index.html', permanent=True))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
