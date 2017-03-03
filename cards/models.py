@@ -19,3 +19,4 @@ class CardBalance(models.Model):
     profile_name = models.CharField(max_length=255, blank=True, null=True),
     profile_surname = models.CharField(max_length=255, blank=True, null=True),
     profile_id = models.CharField(max_length=7, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True)
