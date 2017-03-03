@@ -17,7 +17,9 @@ def xldate_to_datetime(xldate):
 def get_status_code(card_status):
     card_status = card_status.lower()
     filtered = [status[0] for status in CARD_STATUSES if status[1] == card_status]
-    return filtered[0] or None
+    if not filtered:
+        return None
+    return filtered[0]
 
 
 @shared_task
