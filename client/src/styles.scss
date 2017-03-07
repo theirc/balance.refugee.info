@@ -31,6 +31,10 @@ body {
   text-align: center;
 }
 
+.small-margin {
+  margin: 0.5em 0;
+}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -78,7 +82,6 @@ body {
   @media (max-height: $screen-height-very-low) {
     height: 40px;
     font-size: 20px;
-    width: 180px;
     &.smaller-text {
       font-size: 16px;
       padding: 0 12px;

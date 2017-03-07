@@ -21,12 +21,10 @@
   }
 }
 .content {
-  display: flex;
+  display: block;
+  overflow: auto;
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 30px;
+  padding: 0 20px;
   @media (max-height: $screen-height-very-low) {
     padding: 0 15px;
     p {
@@ -37,9 +35,7 @@
     text-align: center;
     margin: 5px 0;
   }
-  @media (max-height: $screen-height-very-low) {
-    padding-top: 15px;
-    overflow: auto;
-    display: block;
+  p > a {
+    color: $color-white;
   }
 }
