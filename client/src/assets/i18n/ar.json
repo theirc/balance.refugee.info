@@ -16,6 +16,8 @@
     "BALANCE": "رصيدك المتبقي:",
     "NOTE_1": "ملاحظة: جميع أجهزة الصراف الآلي ستعطي المال باليورو حصراً داخل أوروبا. ولكن المبلغ الظاهر هو بالدولار USD $.",
     "NOTE_2": "سيتم تحويل المال إلى يورو تبعاً لسعر الصرف الحالي وذلك عند سحب المال من الصراف الآلي. ",
+    "NOTE_3": "Balance retrieved on {{date}} at 12:00 AM. For more accuracy please visit",
+    "NOTE_4": "www.prepaidcardstatus.com",
     "TO_START": "العودة إلى البداية",
     "TO_REFUGEE_INFO": "إذهب إلى Refugee.info",
     "TO_INPUT": "العودة إلى استمارة البطاقة (Card Form)",

@@ -15,7 +15,9 @@
   "RESULTS": {
     "BALANCE": "Your remaining balance is:",
     "NOTE_1": "Note: European ATM Machines only give out EURO. The displayed amount is in USD $.",
-    "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro.",
+    "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro, plus transaction feed (5 Euro fee for each ATM withdrawal, plus foreign exchange fee, which is around 2% of withdrawal amount).",
+    "NOTE_3": "Balance retrieved on {{dateUpdated}} at 12:00 AM. For more accuracy please visit",
+    "NOTE_4": "www.prepaidcardstatus.com",
     "TO_START": "Back to start",
     "TO_REFUGEE_INFO": "Go to Refugee.info",
     "TO_INPUT": "Back to Card Form",
