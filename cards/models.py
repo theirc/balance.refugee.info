@@ -20,3 +20,10 @@ class CardBalance(models.Model):
     profile_surname = models.CharField(max_length=255, blank=True, null=True),
     profile_id = models.CharField(max_length=7, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True)
+
+
+class Update(models.Model):
+    date = models.DateTimeField(auto_now=True)
+    created_count = models.IntegerField()
+    updated_count = models.IntegerField()
+

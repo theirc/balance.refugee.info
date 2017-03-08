@@ -5,7 +5,7 @@ import datetime
 from celery import shared_task
 from django.conf import settings
 
-from cards.models import CardBalance, CARD_STATUSES
+from cards.models import CardBalance, CARD_STATUSES, Update
 
 
 def xldate_to_datetime(xldate):
@@ -24,6 +24,7 @@ def get_status_code(card_status):
 
 @shared_task
 def import_spreadsheets():
+
     def get_spreadsheets():
         balance_spreadsheet_file = requests.get(settings.CARD_BALANCE_FILE_URL, stream=True)
         phone_spreadsheet_file = requests.get(settings.CARD_PHONE_FILE_URL, stream=True)
@@ -38,6 +39,7 @@ def import_spreadsheets():
         return balance_spreadsheet, cards_spreadsheet
 
     def update_cards_with_phone_number(cards_spreadsheet):
+        nonlocal created_count
         centres = [str(cards_spreadsheet.cell_value(0, i)).lower() for i in range(0, cards_spreadsheet.ncols, 2)]
         rows = []
         for index, centre in enumerate(centres):
@@ -52,8 +54,11 @@ def import_spreadsheets():
             card, created = CardBalance.objects.get_or_create(card_no=row['irc 16 digits'])
             card.phone_no = row['preferred contact phone number']
             card.save()
+            if created:
+                created_count += 1
 
     def update_cards_with_balance(balance_spreadsheet):
+        nonlocal updated_count
         header = [str(balance_spreadsheet.cell_value(0, i)).lower() for i in range(0, balance_spreadsheet.ncols)]
         rows = [dict(zip(header, [balance_spreadsheet.cell_value(j, i) for i in range(0, balance_spreadsheet.ncols)]))
                 for j in range(1, balance_spreadsheet.nrows)]
@@ -70,9 +75,22 @@ def import_spreadsheets():
                 card.profile_surname = row.get('profile last name')
                 card.profile_id = int(row.get('cardholderid'))
                 card.save()
+                updated_count += 1
             except CardBalance.DoesNotExist:
                 pass
 
+    def create_update_report():
+        nonlocal updated_count
+        nonlocal created_count
+        Update.objects.create(
+            updated_count=updated_count,
+            created_count=created_count
+        )
+
+    created_count = 0
+    updated_count = 0
     balance_spreadsheet, cards_spreadsheet = get_spreadsheets()
     update_cards_with_phone_number(cards_spreadsheet)
     update_cards_with_balance(balance_spreadsheet)
+    create_update_report()
+

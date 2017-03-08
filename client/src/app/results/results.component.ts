@@ -15,22 +15,15 @@ export class ResultsComponent implements OnInit {
 
     private datePipe: DatePipe;
     balance: string;
-    dateUpdated: any;
+    updated: any;
 
     constructor(private balanceService: BalanceService) {
         this.balance = balanceService.getBalanceAsUSD();
         this.datePipe = new DatePipe('en-US');
-        this.dateUpdated = {
-            dateUpdated: this.datePipe.transform(this.getLastUpdateDate(), 'dd/MM/yyyy')
+        this.updated = {
+            date: this.datePipe.transform(this.balanceService.updateDate, 'dd/MM/yyyy'),
+            time: this.datePipe.transform(this.balanceService.updateDate, 'hh:mm a')
         };
-    }
-
-    getLastUpdateDate() {
-        let today = new Date();
-        if (today.getHours() >= 12) {
-            return Date.now();
-        }
-        return Date.now() - 24*60*60*1000;
     }
 
     ngOnInit() {
