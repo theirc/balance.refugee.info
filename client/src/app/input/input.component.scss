@@ -8,23 +8,17 @@
 }
 
 .content {
-  display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 30px;
+  padding: 0 20px;
+  overflow: auto;
   @media (max-width: 320px) {
     padding: 0 15px;
-  }
-  @media (max-height: $screen-height-very-low + 80) {
-    overflow: auto;
-    display: block;
   }
 }
 
 form {
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
+  padding: 10px 0;
   width: 100%;
   max-width: $screen-height-very-low;
   label {

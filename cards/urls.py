@@ -18,5 +18,6 @@ from django.conf.urls import url
 from cards import views
 
 urlpatterns = [
-    url(r'^retrieve', views.RetrieveBalanceView.as_view())
+    url(r'^retrieve', views.RetrieveBalanceView.as_view()),
+    url(r'^update', views.GetUpdateDateView.as_view())
 ]

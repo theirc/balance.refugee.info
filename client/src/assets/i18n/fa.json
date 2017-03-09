@@ -16,6 +16,8 @@
     "BALANCE": "باقیمانده موجودی شما:",
     "NOTE_1": "تذکر: دستگاه های خودپرداز اروپایی( ATM) فقط یورو می دهند. مبلغِ نمایش داده شده به دلار USD $ می باشد.",
     "NOTE_2": "نرخ ارزِی بانک بر روی مبلغی که شما به یورو از دستگاه خودپرداز دریافت می کنید، اعمال خواهد شد.",
+    "NOTE_3": "Balance retrieved on {{date}} at {{time}}. For more accuracy please visit",
+    "NOTE_4": "www.prepaidcardstatus.com",
     "TO_START": "بازگشت به شروع",
     "TO_REFUGEE_INFO": "برو به Refugee.info",
     "TO_INPUT": "بازگش به فُرم کارت (Card Form)",
