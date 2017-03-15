@@ -13,7 +13,7 @@
         <input type="text" name="card_no" id="card_no" [(ngModel)]="form.card_no" maxlength="5" />
 
         <label for="phone_no">{{ 'INPUT.PIN' | translate }}</label>
-        <input type="password" name="phone_no" id="phone_no" [(ngModel)]="form.phone_no" maxlength="10" />
+        <input type="text" name="phone_no" id="phone_no" [(ngModel)]="form.phone_no" maxlength="10" />
         <div *ngIf="validationError" class="error">{{ 'INPUT.VALIDATION_ERROR' | translate }}</div>
     </form>
 </div>
