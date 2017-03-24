@@ -40,19 +40,15 @@ def import_spreadsheets():
 
     def update_cards_with_phone_number(cards_spreadsheet):
         nonlocal created_count
-        centres = [str(cards_spreadsheet.cell_value(0, i)).lower() for i in range(0, cards_spreadsheet.ncols, 2)]
-        rows = []
-        for index, centre in enumerate(centres):
-            header = [str(cards_spreadsheet.cell_value(1, i)).lower() for i in range(2 * index, 2 + 2 * index)]
-            rows.append(
-                [dict(zip(header, [cards_spreadsheet.cell_value(j, i) for i in range(2 * index, 2 + 2 * index)]))
-                 for j in range(2, cards_spreadsheet.nrows)])
-        flattened_rows = [item for sublist in rows for item in sublist]
-        filtered_rows = [item for item in flattened_rows if
-                         item.get('irc 16 digits') and item.get('preferred contact phone number')]
-        for row in filtered_rows:
-            card, created = CardBalance.objects.get_or_create(card_no=row['irc 16 digits'])
+        header = [str(cards_spreadsheet.cell_value(1, i)).lower() for i in range(0, 3)]
+        rows = [dict(zip(header, [cards_spreadsheet.cell_value(j, i) for i in range(0, 3)]))
+                for j in range(2, cards_spreadsheet.nrows)]
+        for row in rows:
+            card, created = CardBalance.objects.get_or_create(
+                card_no=round(row['last 5 digits irc card number'])
+            )
             card.phone_no = row['preferred contact phone number']
+            card.site = row['site name']
             card.save()
             if created:
                 created_count += 1
