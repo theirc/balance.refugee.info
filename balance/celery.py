@@ -17,8 +17,8 @@ app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
     # Executes at midnight and noon
-    'import-spreadsheets': {
+    'cards.tasks.import_spreadsheets': {
         'task': 'cards.tasks.import_spreadsheets',
-        'schedule': crontab(minute=0, hour='*/12'),
+        'schedule': crontab(minute='*/15'),
     }
 }
