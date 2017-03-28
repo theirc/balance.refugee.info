@@ -1,2 +1,2 @@
 web: sh start.sh
-worker: celery -A balance worker -l info
+worker: celery -A balance worker -B -l info
