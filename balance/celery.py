@@ -19,6 +19,6 @@ app.conf.beat_schedule = {
     # Executes at midnight and noon
     'cards.tasks.import_spreadsheets': {
         'task': 'cards.tasks.import_spreadsheets',
-        'schedule': crontab(minute='*/15'),
+        'schedule': crontab(minute=0, hour='*/12'),
     }
 }
