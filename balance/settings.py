@@ -135,7 +135,7 @@ CARD_BALANCE_FILE_URL = os.environ.get(
     'https://rescue.box.com/shared/static/koh4pt8gqv0xyjvfm9tpdr08lrdgcyef.xls'
 )
 CARD_PHONE_FILE_URL = os.environ.get(
-    'CARD_BALANCE_FILE_URL',
+    'CARD_PHONE_FILE_URL',
     'https://rescue.box.com/shared/static/c7lp39hk9a2qf88wmb5b48eydasyy6qp.xlsx'
 )
 
