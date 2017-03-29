@@ -72,7 +72,7 @@ def import_spreadsheets():
                 card.profile_id = int(row.get('cardholderid'))
                 card.save()
                 updated_count += 1
-            except CardBalance.DoesNotExist:
+            except (CardBalance.DoesNotExist, CardBalance.MultipleObjectsReturned):
                 pass
 
     def create_update_report():
