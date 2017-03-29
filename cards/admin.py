@@ -9,6 +9,7 @@ class CardBalanceAdmin(admin.ModelAdmin):
         return [f.name for f in self.model._meta.fields]
 
     list_display = ('balance', 'card_no', 'phone_no', 'updated_at')
+    ordering = ('-balance',)
 
 
 class UpdatesAdmin(admin.ModelAdmin):
