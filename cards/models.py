@@ -22,6 +22,9 @@ class CardBalance(models.Model):
     updated_at = models.DateTimeField(auto_now=True, blank=True)
     site = models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return '%s %s' % (self.card_no, self.phone_no)
+
 
 class Update(models.Model):
     date = models.DateTimeField(auto_now=True)
