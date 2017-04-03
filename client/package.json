@@ -33,7 +33,6 @@
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.4",
     "@angular/compiler-cli": "^2.3.1",
-    "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
     "karma": "1.2.0",
@@ -43,7 +42,8 @@
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "^2.1.6"
+    "typescript": "^2.1.6",
+    "node-sass:": "4.5.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^2.3.1",
