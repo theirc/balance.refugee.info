@@ -131,6 +131,7 @@ CELERY_RESULT_BACKEND = 'amqp'
 CELERY_BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672//')
 
 CARD_BALANCE_FILE_URL = os.environ.get('CARD_BALANCE_FILE_URL')
+
 CARD_PHONE_FILE_URL = os.environ.get('CARD_PHONE_FILE_URL')
 
 
