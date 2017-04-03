@@ -10,6 +10,7 @@ class CardBalanceAdmin(admin.ModelAdmin):
 
     list_display = ('balance', 'card_no', 'phone_no', 'updated_at')
     ordering = ('-balance',)
+    search_fields = ['phone_no', 'card_no']
 
 
 class UpdatesAdmin(admin.ModelAdmin):

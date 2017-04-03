@@ -8,12 +8,6 @@ from django.conf import settings
 from cards.models import CardBalance, CARD_STATUSES, Update
 
 
-def xldate_to_datetime(xldate):
-    temp = datetime.datetime(1900, 1, 1)
-    delta = datetime.timedelta(days=xldate - 2)
-    return temp + delta
-
-
 def get_status_code(card_status):
     card_status = card_status.lower()
     filtered = [status[0] for status in CARD_STATUSES if status[1] == card_status]
@@ -61,18 +55,17 @@ def import_spreadsheets():
         for row in rows:
             try:
                 card = CardBalance.objects.get(card_no__endswith=row['cardnumber'][-5:])
-                card.balance = row.get('last retrieved balance') or None
-                card.exp_date = xldate_to_datetime(int(row.get('exp. date')))
+                card.balance = row.get('fundamount') or None
+                card.exp_date = datetime.datetime.strptime(row.get('exp. date'), '%d-%b-%Y')
                 card.status = get_status_code(row.get('cardstatus'))
                 card.location = row.get('locationname')
                 card.product_name = row.get('productname')
                 card.program_name = row.get('programname')
-                card.profile_name = row.get('profile first name')
-                card.profile_surname = row.get('profile last name')
-                card.profile_id = int(row.get('cardholderid'))
+                card.profile_name = row.get('first name')
+                card.profile_surname = row.get('last name')
                 card.save()
                 updated_count += 1
-            except (CardBalance.DoesNotExist, CardBalance.MultipleObjectsReturned):
+            except CardBalance.DoesNotExist:
                 pass
 
     def create_update_report():

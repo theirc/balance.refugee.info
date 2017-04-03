@@ -130,14 +130,8 @@ STATICFILES_DIRS = [
 CELERY_RESULT_BACKEND = 'amqp'
 CELERY_BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672//')
 
-CARD_BALANCE_FILE_URL = os.environ.get(
-    'CARD_BALANCE_FILE_URL',
-    'https://rescue.box.com/shared/static/koh4pt8gqv0xyjvfm9tpdr08lrdgcyef.xls'
-)
-CARD_PHONE_FILE_URL = os.environ.get(
-    'CARD_PHONE_FILE_URL',
-    'https://rescue.box.com/shared/static/c7lp39hk9a2qf88wmb5b48eydasyy6qp.xlsx'
-)
+CARD_BALANCE_FILE_URL = os.environ.get('CARD_BALANCE_FILE_URL')
+CARD_PHONE_FILE_URL = os.environ.get('CARD_PHONE_FILE_URL')
 
 
 # Parse database configuration from $DATABASE_URL
