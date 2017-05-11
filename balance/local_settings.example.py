@@ -2,3 +2,8 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:4200'
 )
 DEBUG = True
+STATIC_URL = '/static/'
+
+CARD_BALANCE_FILE_URL = ''
+
+CARD_PHONE_FILE_URL = ''

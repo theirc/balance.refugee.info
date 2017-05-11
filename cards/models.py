@@ -9,8 +9,11 @@ CARD_STATUSES = (
 
 class CardBalance(models.Model):
     card_no = models.CharField(unique=True, max_length=16, blank=True, null=True)
-    phone_no = models.CharField(max_length=10, blank=True, null=True)
+    irc_no = models.CharField(unique=True, max_length=16, blank=True, null=True)
     balance = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
+    date_of_birth = models.DateField(blank=True, null=True)
+
+    phone_no = models.CharField(max_length=10, blank=True, null=True)
     exp_date = models.DateField(blank=True, null=True)
     status = models.IntegerField(choices=CARD_STATUSES, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True),
@@ -19,3 +22,15 @@ class CardBalance(models.Model):
     profile_name = models.CharField(max_length=255, blank=True, null=True),
     profile_surname = models.CharField(max_length=255, blank=True, null=True),
     profile_id = models.CharField(max_length=7, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True)
+    site = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return '%s %s' % (self.card_no, self.date_of_birth)
+
+
+class Update(models.Model):
+    date = models.DateTimeField(auto_now=True)
+    created_count = models.IntegerField()
+    updated_count = models.IntegerField()
+

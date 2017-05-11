@@ -1,28 +1,30 @@
 {
-  "UPDATED_ON": "Updated on",
+  "UPDATED_ON": "به روز شده در تاریخ",
   "WELCOME": {
-    "HELP": "This tool will allow you to check your IRC ATM card balance for free.",
-    "NOTE_1": "Note: the information is updated on business days only.",
-    "NOTE_2": "Please check the updated status below for the most recent update.",
-    "GET_STARTED": "Press here to Start"
+    "HELP": "این ابزار به شما اجازه می دهد تا بطور رایگان موجودی کارت خود پردازتان (IRC ATM) را بررسی کنید.",
+    "NOTE_1": "تذکر: اطلاعات فقط در روزهای کاری به روز می شوند.",
+    "NOTE_2": "اینجا را برای شروع فشار دهید.",
+    "GET_STARTED": "اینجا را برای شروع فشار دهید."
   },
   "INPUT": {
-    "CARD_NO": "Enter your last 5 digits from the card",
-    "PIN": "Enter your 10 digit Phone Number",
-    "CHECK_BALANCE": "Press to Check Balance",
-    "VALIDATION_ERROR": "Phone and card number does not match."
+    "CARD_NO": "5 رقم آخر کارت خود را وارد کنید.",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
+    "CHECK_BALANCE": "برای چک کردن موجودی اینجا را فشار دهید.",
+    "VALIDATION_ERROR": "شماره تلفن و/یا شماره کارت صحیح نیستند."
   },
   "RESULTS": {
-    "BALANCE": "Your remaining balance is:",
-    "NOTE_1": "Note: European ATM Machines only give out EURO. The displayed amount is in USD $.",
-    "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro.",
-    "TO_START": "Back to start",
-    "TO_REFUGEE_INFO": "Go to Refugee.info",
-    "TO_INPUT": "Back to Card Form",
-    "ERROR": "Seems that you came here from bad link. Click button below to go to Card Form."
+    "BALANCE": "باقیمانده موجودی شما:",
+    "NOTE_1": " توجه: دستگاه های خودپرداز یونانی (ATM) فقط یورو(Euro) می دهد، موجودی شما به دلار آمریکایی (USD) نمایش داد شده است.",
+    "NOTE_2": "نرخ ارزِی بانک بر روی مبلغی که شما به یورو از دستگاه خودپرداز دریافت می کنید، اعمال خواهد شد.",
+    "NOTE_3": "Balance retrieved on {{date}} at {{time}}. For more accuracy please visit",
+    "NOTE_4": "www.prepaidcardstatus.com",
+    "TO_START": "بازگشت به شروع",
+    "TO_REFUGEE_INFO": "برو به Refugee.info",
+    "TO_INPUT": "بازگش به فُرم کارت (Card Form)",
+    "ERROR": "به نظر میرسد شما از لینک بد به اینجا  آمده اید. برای رفتن به فرم کارت روی دکمه زیر کلیک نماید. "
   },
   "PAGE_NOT_FOUND": {
-    "NOT_FOUND": "Page not found.",
-    "GO_TO_MAIN_PAGE": "Go to Main Page"
+    "NOT_FOUND": "صفحه پیدا نشد.",
+    "GO_TO_MAIN_PAGE": "برو به صفحه اصلی."
   }
 }

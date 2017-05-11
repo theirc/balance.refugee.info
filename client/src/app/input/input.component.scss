@@ -8,23 +8,17 @@
 }
 
 .content {
-  display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 30px;
+  padding: 0 20px;
+  overflow: auto;
   @media (max-width: 320px) {
     padding: 0 15px;
-  }
-  @media (max-height: $screen-height-very-low + 80) {
-    overflow: auto;
-    display: block;
   }
 }
 
 form {
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
+  padding: 10px 0;
   width: 100%;
   max-width: $screen-height-very-low;
   label {
@@ -38,8 +32,8 @@ form {
     padding: 8px 12px;
     border-radius: 12px;
     border: 2px solid $color-black-4;
-    background-color: darken($color-black-6, 6%);
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-black-2;
     text-align: center;
   }
 }

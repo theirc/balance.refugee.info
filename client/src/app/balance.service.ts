@@ -11,7 +11,9 @@ class Balance {
 export class BalanceService {
 
     balance: number;
+    updateDate: string;
     retrieveURL = '/retrieve/';
+    updateURL = '/update/';
 
     constructor(private http: Http) {
     }
@@ -20,7 +22,7 @@ export class BalanceService {
         this.balance = balance;
     }
 
-    getBalanceAsUSD() {
+    getBalanceAsUSD(): string {
         if (this.balance) {
             return `${this.balance.toFixed(2)} $`;
         } else {
@@ -36,5 +38,16 @@ export class BalanceService {
             }).catch(error => {
                 return Promise.reject(error);
             });
+    }
+
+    getLastUpdate() {
+        return this.http.get(`${environment.apiPath}${this.updateURL}`)
+          .toPromise()
+          .then(response => {
+              this.updateDate = response.json().date;
+              return Promise.resolve(response);
+          }).catch(error => {
+              return Promise.reject(error);
+          });
     }
 }

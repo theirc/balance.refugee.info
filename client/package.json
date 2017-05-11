@@ -33,7 +33,6 @@
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.4",
     "@angular/compiler-cli": "^2.3.1",
-    "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
     "karma": "1.2.0",

@@ -3,23 +3,25 @@
   "WELCOME": {
     "HELP": "This tool will allow you to check your IRC ATM card balance for free.",
     "NOTE_1": "Note: the information is updated on business days only.",
-    "NOTE_2": "Please check the updated status below for the most recent update.",
+    "NOTE_2": "Check below for when this information was last updated.",
     "GET_STARTED": "Press here to Start"
   },
   "INPUT": {
-    "CARD_NO": "Enter your last 5 digits from the card",
-    "PIN": "Enter your 10 digit Phone Number",
-    "CHECK_BALANCE": "Press to Check Balance",
+    "CARD_NO": "Enter your last five digits from the card",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
+    "CHECK_BALANCE": "Press to check balance",
     "VALIDATION_ERROR": "Phone and card number does not match."
   },
   "RESULTS": {
     "BALANCE": "Your remaining balance is:",
-    "NOTE_1": "Note: European ATM Machines only give out EURO. The displayed amount is in USD $.",
-    "NOTE_2": "A Bank exchange rate will be applied once you withdraw money from the ATM in Euro.",
+    "NOTE_1": "Note: Greek ATMs give out euros only. Your balance is displayed in USD.",
+    "NOTE_2": "A bank exchange rate will be applied when you withdraw euros from an ATM. You will be charged a 5 Euro fee for each ATM withdrawal, plus a foreign-exchange fee of around 2 percent of your withdrawal.",
+    "NOTE_3": "Balance retrieved on {{date}} at {{time}}. For more accuracy please visit",
+    "NOTE_4": "www.prepaidcardstatus.com",
     "TO_START": "Back to start",
     "TO_REFUGEE_INFO": "Go to Refugee.info",
     "TO_INPUT": "Back to Card Form",
-    "ERROR": "Seems that you came here from bad link. Click button below to go to Card Form."
+    "ERROR": "Looks like you came here from bad link. Click the button below to go to the card form."
   },
   "PAGE_NOT_FOUND": {
     "NOT_FOUND": "Page not found.",
