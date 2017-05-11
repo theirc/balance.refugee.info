@@ -8,7 +8,7 @@
   },
   "INPUT": {
     "CARD_NO": "5 رقم آخر کارت خود را وارد کنید.",
-    "PIN": "شماره تلفن  رقمی خود را وارد کنید.",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "برای چک کردن موجودی اینجا را فشار دهید.",
     "VALIDATION_ERROR": "شماره تلفن و/یا شماره کارت صحیح نیستند."
   },
