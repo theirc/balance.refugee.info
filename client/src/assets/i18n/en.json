@@ -8,7 +8,7 @@
   },
   "INPUT": {
     "CARD_NO": "Enter your last five digits from the card",
-    "PIN": "Enter your 10 digit phone number",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "Press to check balance",
     "VALIDATION_ERROR": "Phone and card number does not match."
   },

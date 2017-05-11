@@ -12,9 +12,10 @@ class RetrieveBalanceView(APIView):
     @csrf_exempt
     def post(self, request):
         data = request.data
-        if data.get('card_no') and data.get('phone_no'):
+        if data.get('card_no') and data.get('date_of_birth'):
             try:
-                card = CardBalance.objects.get(card_no__endswith=data['card_no'][-5:], phone_no=data['phone_no'])
+                card = CardBalance.objects.get(card_no__endswith=data['card_no'][-5:],
+                                               date_of_birth=datetime.strptime(data['date_of_birth'], "%d/%m/%Y"))
                 return Response({'balance': card.balance})
             except CardBalance.DoesNotExist:
                 raise NotFound

@@ -12,8 +12,8 @@
         <label for="card_no">{{ 'INPUT.CARD_NO' | translate }}</label>
         <input type="text" name="card_no" id="card_no" [(ngModel)]="form.card_no" maxlength="5" />
 
-        <label for="phone_no">{{ 'INPUT.PIN' | translate }}</label>
-        <input type="text" name="phone_no" id="phone_no" [(ngModel)]="form.phone_no" maxlength="10" />
+        <label for="date_of_birth">{{ 'INPUT.PIN' | translate }}</label>
+        <input type="text" name="date_of_birth" id="date_of_birth" [(ngModel)]="form.date_of_birth" maxlength="10" (ngModelChange)="transformInput()"/>
         <div *ngIf="validationError" class="error">{{ 'INPUT.VALIDATION_ERROR' | translate }}</div>
     </form>
 </div>

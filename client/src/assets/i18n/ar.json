@@ -8,7 +8,7 @@
   },
   "INPUT": {
     "CARD_NO": "أدخل آخر خمسة أرقام من بطاقتك.",
-    "PIN": "أدخل رقم هاتفك والمكون من 10 خانات.",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "إضغط حتّى ترى رصيدك",
     "VALIDATION_ERROR": "رقم الهاتف و/أو رقم البطاقة غير صحيح."
   },

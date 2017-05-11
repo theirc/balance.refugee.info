@@ -132,7 +132,7 @@ CELERY_BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost
 
 CARD_BALANCE_FILE_URL = os.environ.get('CARD_BALANCE_FILE_URL')
 
-CARD_PHONE_FILE_URL = os.environ.get('CARD_PHONE_FILE_URL')
+DATE_OF_BIRTH_FILE_URL = os.environ.get('DATE_OF_BIRTH_FILE_URL')
 
 
 # Parse database configuration from $DATABASE_URL
