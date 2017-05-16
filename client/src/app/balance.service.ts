@@ -24,7 +24,7 @@ export class BalanceService {
 
     getBalanceAsUSD(): string {
         if (this.balance) {
-            return `${this.balance.toFixed(2)} $`;
+            return `${this.balance.toFixed(2)}`;
         } else {
             return '';
         }
