@@ -8,7 +8,7 @@ class CardBalanceAdmin(admin.ModelAdmin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in self.model._meta.fields]
 
-    list_display = ('balance', 'card_no', 'phone_no', 'updated_at')
+    list_display = ('balance', 'card_no', 'irc_no', 'date_of_birth', 'updated_at')
     ordering = ('-balance',)
     search_fields = ['phone_no', 'card_no']
 

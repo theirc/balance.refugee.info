@@ -8,16 +8,13 @@
   },
   "INPUT": {
     "CARD_NO": "Enter your last five digits from the card",
-    "PIN": "Enter your 10 digit phone number",
+    "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "Press to check balance",
-    "VALIDATION_ERROR": "Phone and card number does not match."
+    "VALIDATION_ERROR": "Date of birth and card number does not match."
   },
   "RESULTS": {
     "BALANCE": "Your remaining balance is:",
-    "NOTE_1": "Note: Greek ATMs give out euros only. Your balance is displayed in USD.",
-    "NOTE_2": "A bank exchange rate will be applied when you withdraw euros from an ATM. You will be charged a 5 Euro fee for each ATM withdrawal, plus a foreign-exchange fee of around 2 percent of your withdrawal.",
-    "NOTE_3": "Balance retrieved on {{date}} at {{time}}. For more accuracy please visit",
-    "NOTE_4": "www.prepaidcardstatus.com",
+    "NOTE_3": "Balance retrieved on {{date}} at {{time}}.",
     "TO_START": "Back to start",
     "TO_REFUGEE_INFO": "Go to Refugee.info",
     "TO_INPUT": "Back to Card Form",
