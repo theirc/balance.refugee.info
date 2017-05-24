@@ -1,15 +1,21 @@
 from datetime import datetime
 
+from django.utils.decorators import method_decorator
+from rest_framework.authentication import BasicAuthentication
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound, ValidationError
 from django.views.decorators.csrf import csrf_exempt
 
+from balance.auth import CsrfExemptSessionAuthentication
 from cards.models import CardBalance, Update
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class RetrieveBalanceView(APIView):
-    @csrf_exempt
+
+    authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+
     def post(self, request):
         data = request.data
         if data.get('irc_no') and data.get('date_of_birth'):
