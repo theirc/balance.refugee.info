@@ -32,19 +32,21 @@ def import_spreadsheets():
 
     def update_cards_with_dob(dob_spreadsheet):
         nonlocal created_count
-        header = [str(dob_spreadsheet.cell_value(0, i)).lower() for i in range(0, 2)]
-        rows = [dict(zip(header, [dob_spreadsheet.cell_value(j, i) for i in range(0, 2)]))
-                for j in range(1, dob_spreadsheet.nrows)]
+        header = [str(dob_spreadsheet.cell_value(1, i)).lower() for i in range(0, 5)]
+        rows = [dict(zip(header, [dob_spreadsheet.cell_value(j, i) for i in range(0, 5)]))
+                for j in range(2, dob_spreadsheet.nrows)]
         for row in rows:
-            if not row.get('irc number') or not row.get('dob'):
+            if not row.get('new irc number') or not row.get('date of birth'):
                 continue
             card, created = CardBalance.objects.get_or_create(
-                irc_no=round(row['irc number'])
+                irc_no=str(round(row['new irc number'])).zfill(4)
             )
-            if isinstance(row['dob'], str):
-                card.date_of_birth = row['dob']
+            if isinstance(row['date of birth'], str):
+                card.date_of_birth = row['date of birth']
             else:
-                card.date_of_birth = datetime.datetime(*xlrd.xldate_as_tuple(row['dob'], 0))
+                card.date_of_birth = datetime.datetime(*xlrd.xldate_as_tuple(row['date of birth'], 0))
+            card_no = row.get('cardholder id')
+            card.card_no = round(card_no) if isinstance(card_no, float) else card_no
             card.save()
             if created:
                 created_count += 1
@@ -57,8 +59,8 @@ def import_spreadsheets():
                 for j in range(0, len(balance_spreadsheet))]
         for row in rows:
             try:
-                card = CardBalance.objects.get(irc_no=row[' LastName'])
-                card.card_no = row.get(' CardholderID')
+                card = CardBalance.objects.get(irc_no=row.get(' LastName', '').zfill(4),
+                                               card_no=row.get(' CardholderID', '').lstrip('\''))
                 card.balance = row.get(' Available Balance') or None
                 card.save()
                 updated_count += 1
