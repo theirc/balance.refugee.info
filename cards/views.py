@@ -12,14 +12,14 @@ class RetrieveBalanceView(APIView):
     @csrf_exempt
     def post(self, request):
         data = request.data
-        if data.get('card_no') and data.get('date_of_birth'):
+        if data.get('irc_no') and data.get('date_of_birth'):
             try:
-                card = CardBalance.objects.get(card_no__endswith=data['card_no'][-5:],
+                card = CardBalance.objects.get(irc_no=data['irc_no'],
                                                date_of_birth=datetime.strptime(data['date_of_birth'], "%d/%m/%Y"))
                 return Response({'balance': card.balance})
             except CardBalance.DoesNotExist:
                 raise NotFound
-        raise ValidationError('Card number or phone number is missing.')
+        raise ValidationError('IRC number or Date  of Birth is missing.')
 
 
 class GetUpdateDateView(APIView):
