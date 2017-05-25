@@ -7,7 +7,7 @@
     "GET_STARTED": "Press here to Start"
   },
   "INPUT": {
-    "IRC_NO": "Enter your four digit IRC number",
+    "IRC_NO": "Enter your four-digit IRC number",
     "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "Press to check balance",
     "VALIDATION_ERROR": "Date of birth and IRC number does not match."
