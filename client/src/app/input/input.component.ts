@@ -14,7 +14,7 @@ export class InputComponent implements OnInit {
     @HostBinding('@routeAnimation') routeAnimation = true;
 
     form = {
-        card_no: '',
+        irc_no: '',
         date_of_birth: ''
     };
     validationError = false;

@@ -5,12 +5,12 @@
             <span class="visa">VISA</span>
             <img class="mastercard" src="/assets/mastercard.png">
         </div>
-        <p class="card-no">**** **** ***X XXXX</p>
+        <p class="card-no">**** **** **** ****</p>
     </div>
 
     <form>
-        <label for="card_no">{{ 'INPUT.CARD_NO' | translate }}</label>
-        <input type="text" name="card_no" id="card_no" [(ngModel)]="form.card_no" maxlength="5" />
+        <label for="irc_no">{{ 'INPUT.IRC_NO' | translate }}</label>
+        <input type="text" name="irc_no" id="irc_no" [(ngModel)]="form.irc_no" maxlength="4" />
 
         <label for="date_of_birth">{{ 'INPUT.PIN' | translate }}</label>
         <input type="text" name="date_of_birth" id="date_of_birth" [(ngModel)]="form.date_of_birth" maxlength="10" (ngModelChange)="transformInput()"/>

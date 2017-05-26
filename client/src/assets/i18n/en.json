@@ -7,10 +7,10 @@
     "GET_STARTED": "Press here to Start"
   },
   "INPUT": {
-    "CARD_NO": "Enter your last five digits from the card",
+    "IRC_NO": "Enter your four-digit IRC number",
     "PIN": "Enter your date of birth in DD/MM/YYYY format",
     "CHECK_BALANCE": "Press to check balance",
-    "VALIDATION_ERROR": "Date of birth and card number does not match."
+    "VALIDATION_ERROR": "Date of birth and IRC number does not match."
   },
   "RESULTS": {
     "BALANCE": "Your remaining balance is:",
