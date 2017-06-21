@@ -59,8 +59,7 @@ def import_spreadsheets():
                 for j in range(0, len(balance_spreadsheet))]
         for row in rows:
             try:
-                card = CardBalance.objects.get(irc_no=row.get(' LastName', '').zfill(4),
-                                               card_no=row.get(' CardholderID', '').lstrip('\''))
+                card = CardBalance.objects.get(card_no=row.get(' CardholderID', '').lstrip('\''))
                 card.balance = row.get(' Available Balance') or None
                 card.save()
                 updated_count += 1
